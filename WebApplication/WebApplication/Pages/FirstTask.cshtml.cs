@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using HelpClassLibrary.FirstTask;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -25,8 +23,7 @@ namespace WebApplication
             int[] elems;
             try
             {
-                var strs = Array.Split(',', ' ');
-                elems =strs.Where(p=>p.Length>0).Select(a => int.Parse(a)).ToArray();
+                elems = Array.Split(',', ' ').Where(p=>p.Length>0).Select(a => int.Parse(a)).ToArray();
                 Result = Counter.GetSummOfOddNumbers(elems).ToString();
             }
             catch (Exception e)

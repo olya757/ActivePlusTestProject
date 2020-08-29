@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using HelpClassLibrary.SecondTask;
+﻿using HelpClassLibrary.SecondTask;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -22,7 +18,6 @@ namespace WebApplication
         [BindProperty]
         public string SummOfLists { get; set; }
 
-
         public IActionResult OnGet()
         {
             return Page();
@@ -30,7 +25,6 @@ namespace WebApplication
 
         public IActionResult OnPost()
         {
-
             if(First>=0 && Second >= 0)
             {
                 SummOfNumbers = First + Second;
@@ -38,8 +32,6 @@ namespace WebApplication
                 ListOfDigits list2 = new ListOfDigits(Second);
                 SummOfLists = ListOfDigitsCalculator.GetSummOfLists(list1, list2).ToString();
             }
-
-
             return Page();
         }
     }
