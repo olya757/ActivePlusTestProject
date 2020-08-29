@@ -46,6 +46,10 @@ namespace HelpClassLibrary.SecondTask
             ElderNode = null;
             YoungerNode = null;
         }
+        public override string ToString()
+        {
+            return value.ToString();
+        }
     }
 
     

@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication.FirstTaskModel
+@{
+    ViewData["Title"] = "FirstTask";
+}
+
+<h1>FirstTask</h1>
+<p>Реализовать приложение C#, которое предоставит функционал сложения каждого второго нечетного числа из массива чисел тела запроса и вернёт их сумму по модулю.</p>
+<form method="post">
+    <dir>
+        Массив:
+        <input type="text" asp-for="Array" />
+        <input type="submit" value="Сложить" />
+        <p>Результат: @Model.Result</p>
+    </dir>
+</form>
+

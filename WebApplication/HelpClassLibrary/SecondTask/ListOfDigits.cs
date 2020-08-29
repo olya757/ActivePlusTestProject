@@ -33,5 +33,18 @@ namespace HelpClassLibrary.SecondTask
         {
             YoungerNode = new ListNode();
         }
+
+        public override string ToString()
+        {
+            string result = "-null";
+            var node = YoungerNode;
+            while(!(node is null))
+            {
+                result = "-" + node + result;
+                node = node.ElderNode;
+            }
+            result = "null-" + result;
+            return result;
+        }
     }
 }

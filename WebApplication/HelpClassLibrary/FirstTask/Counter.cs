@@ -14,9 +14,12 @@ namespace HelpClassLibrary.FirstTask
             bool isSecond = false;
             foreach(var n in numbers)
             {
-                if(n%2!=0 && isSecond)
+                if(n%2!=0 )
                 {
-                    summ += n;
+                    if (isSecond)
+                    {
+                        summ += n;
+                    }
                     isSecond = !isSecond;
                 }
             }
