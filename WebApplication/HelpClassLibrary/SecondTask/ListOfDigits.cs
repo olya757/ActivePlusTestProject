@@ -43,7 +43,7 @@ namespace HelpClassLibrary.SecondTask
                 result = "-" + node + result;
                 node = node.ElderNode;
             }
-            result = "null-" + result;
+            result = "null" + result;
             return result;
         }
     }

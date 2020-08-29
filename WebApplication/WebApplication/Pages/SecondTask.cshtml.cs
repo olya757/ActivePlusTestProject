@@ -31,7 +31,7 @@ namespace WebApplication
         public IActionResult OnPost()
         {
 
-            if(First>0 && Second > 0)
+            if(First>=0 && Second >= 0)
             {
                 SummOfNumbers = First + Second;
                 ListOfDigits list1 = new ListOfDigits(First);
